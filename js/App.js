@@ -1,8 +1,9 @@
 import { html, render } from './common.js'
-import SelectGame from './SelectGame.js'
 
 function App(props) {
-    return html`<${SelectGame} />`
+    return html`<div>Hello</div>`
 }
+
+alert("hey!")
 
 render(html`<${App} />`, document.body)
