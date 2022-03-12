@@ -1,8 +1,8 @@
-image:
-  file: .gitpod.Dockerfile
+image: gitpod/workspace-full-vnc
 tasks:
-  - init: yarn
-    command: yarn http-server -p 3000 -c-1
+  - command: sudo apt-get update
+  - command: sudo apt install -yq chromium-browser
+  - command: yarn http-server -p 3000 -c-1
   - command: chromium-browser --no-sandbox
 ports:
   - port: 3000
